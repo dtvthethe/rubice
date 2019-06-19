@@ -29,7 +29,7 @@ files_abort_files = Dir["#{str_path}**/*.{#{abort_extentions}}"]
 puts "1> REMOVE or END LINE: "
 files_abort_files.each { |x| puts x }
 puts "2> END LINE: "
-check_file_not_extentions.each { |x| files.append "#{str_path}#{x}" }
+check_file_not_extentions.each { |x| files.push("#{str_path}#{x}") }
 files.each do |x|
   if end_line_validate?(x) == false
     puts x
